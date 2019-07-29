@@ -50,6 +50,10 @@ class CactiTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath)
 
         cell.textLabel?.text=allCacti[indexPath.row].title
+        
+            cell.detailTextLabel?.text = allCacti[indexPath.row].text
+        
+        cell.imageView?.image=UIImage(named:allCacti[indexPath.row].image)
 
         return cell
     }
